@@ -18,7 +18,7 @@ $$h_\theta(x) = \theta^{T}x, \theta \in \mathbb{R}^{n \times k}$$
     - loss function #2: softmax / cross-entropy loss. The $z_i = p(\text{label} = i) = \frac{exp(h_i(x))}{\sum_{k}^{j=1}exp(h_j(x))} \Leftrightarrow z \equiv \text{softmax}(h(x))$. $$l_{ce}(h(x),y) = -\text{log}p(\text{label}=y) = -h_y(x) + \text{log}\sum^{k}_{j=1}\text{exp}((h_j(x)))$$
 
 - *The softmax regression optimization problem*: 
-$\mathop{\text{minimize}}\limits_{\theta}$  $\frac{1}{m} \sum_{i=1}^{m}l_{ce}(\theta^Tx^{(i)}, y^{(i)}).$
+$$\mathop{\text{minimize}}\limits_{\theta} \frac{1}{m} \sum_{i=1}^{m}l_{ce}(\theta^Tx^{(i)}, y^{(i)}).$$
 
 - gradient descent 
     - stochastic gradient descent: take many gradient steps each based upon a minibatch (small partition of the data)
