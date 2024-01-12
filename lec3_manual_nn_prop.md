@@ -3,7 +3,8 @@
 ## From linear to nonlinear hypothesis classes.
 > the importance of introducing the nonlinear activation function.
 
-When meeting the nonlinear classification boundaries, the linear hypothesis function fails. Then we can apply the linear classifier to some(potentially higher-dimensional) features of the data$$h_\theta(x) = \theta^T\phi(x), \theta \in \mathbb{R}^{d \times k}, \phi : \mathbb{R}^n \to \mathbb{R}^d$$
+When meeting the nonlinear classification boundaries, the linear hypothesis function fails. Then we can apply the linear classifier to some(potentially higher-dimensional) features of the data
+$$h_\theta(x) = \theta^T\phi(x), \theta \in \mathbb{R}^{d \times k}, \phi : \mathbb{R}^n \to \mathbb{R}^d$$
 
 > how can we create the feature function $\phi$?
 1. Through manual engineering of features relevant to the problem (the "old" way of doing machine learning)
