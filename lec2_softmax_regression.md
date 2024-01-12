@@ -7,19 +7,17 @@
 3. **An optimization method**: a procedure for determining a set of parameters taht minimize the sum of losses over the training set.
 
 > As for the softmax regression solving the multi-class classification.
-- training data: $x^{i} \in \mathbb{R}^n, y^{i} \in \{1,..,k\} $ for $i = 1,...,m$, while the n refers to the dimensionality of the input data, k denotes the number of classes and the m represents the number of points in the training dataset.
+- training data: $x^{i} \in \mathbb{R}^n, y^{i} \in \{1,..,k\}$ for $i = 1,...,m$, while the n refers to the dimensionality of the input data, k denotes the number of classes and the m represents the number of points in the training dataset.
 - *hypothesis function* maps inputs $x \in \mathbb{R}^n$ to $k$-dimensional vectors
-$$
-    h: \mathbb{R}^n \to \mathbb{R}^k.
-$$
+$$h: \mathbb{R}^n \to \mathbb{R}^k.$$
+
 - A linear hypothesis function uses a linear operator (i.e. matrix multiplication) for this transformation 
-$$
-    h_\theta(x) = \theta^{T}x, \theta \in \mathbb{R}^{n \times k}$$ 
+$$h_\theta(x) = \theta^{T}x, \theta \in \mathbb{R}^{n \times k}$$ 
 - *loss function*
     - loss function #1: classification error: just a bool value, bad choice because it is not differentiable.
     - loss function #2: softmax / cross-entropy loss. The $z_i = p(\text{label} = i) = \frac{exp(h_i(x))}{\sum_{k}^{j=1}exp(h_j(x))} \Leftrightarrow z \equiv \text{softmax}(h(x))$. $$l_{ce}(h(x),y) = -\text{log}p(\text{label}=y) = -h_y(x) + \text{log}\sum^{k}_{j=1}\text{exp}((h_j(x)))$$
 
-- *The softmax regression optimization problem* $$\mathop{\text{minimize}}\limits_{\theta} \frac{1}{m} \sum^{m}_{i=1}l_{ce}(\theta^Tx^{(i)}, y^{(i)}) $$
+- *The softmax regression optimization problem* $$\mathop{\text{minimize}}\limits_{\theta} \frac{1}{m} \sum^{m}_{i=1}l_{ce}(\theta^Tx^{(i)}, y^{(i)})$$
 
 - gradient descent 
     - stochastic gradient descent: take many gradient steps each based upon a minibatch (small partition of the data)
