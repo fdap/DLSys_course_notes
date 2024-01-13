@@ -30,15 +30,15 @@ with nonlinearities $\sigma_i: \mathbb{R} \to \mathbb{R}$ applied elementwise, a
 > backpropagation in general
 
 The loss function is defined as $l(Z_{L+1}, y)$, for $W_i$, we have
-$$\frac{\partial l(Z_{L+1}, y)}{\partial W_i} = \frac{\partial l(Z_{L+1}, y)}{\partial Z_{L+1}} \cdot \frac{\partial Z_{L+1}}{\partial Z_{L}} \cdot ... \cdot \frac{\partial Z_{i+2}}{\partial Z_{i+1}} \cdot \frac{\partial Z_{i+1}}{\partial W_{i}}$$
+$$\frac{\partial \ell(Z_{L+1}, y)}{\partial W_i} = \frac{\partial \ell(Z_{L+1}, y)}{\partial Z_{L+1}} \cdot \frac{\partial Z_{L+1}}{\partial Z_{L}} \cdot ... \cdot \frac{\partial Z_{i+2}}{\partial Z_{i+1}} \cdot \frac{\partial Z_{i+1}}{\partial W_{i}}$$
 we note
-$$G_{i+1} =  \frac{\partial l(Z_{i+1}, y)}{\partial W_i}$$
+$$G_{i+1} =  \frac{\partial \ell(Z_{i+1}, y)}{\partial W_i}$$
 then we have
 $$G_i = G_{i+1} \cdot \frac{\partial Z_{i+1}}{\partial Z_{i}} = G_{i+1} \cdot \frac{\partial \sigma_i(Z_iW_i)}{\partial Z_iW_i} \cdot \frac{\partial Z_i W_i}{\partial Z_i} = G_{i+1} \cdot \sigma^{'}(Z_iW_i)\cdot W_i.$$
 
 Consider about the shape of $G_i \in \mathbb{R}^{m \times n_i}$, 
 $$\frac{\partial l(Z_{L+1}, y)}{\partial W_i} = G_{i+1} \cdot \frac{\partial \sigma_i(Z_iW_i)}{\partial Z_iW_i} \cdot \frac{\partial Z_i W_i}{\partial W_i} = G_{i+1} \cdot \sigma^{'}(Z_iW_i)\cdot Z_i  \\
-\Rightarrow \nabla_{ W_i} l(Z_{L+1}, y) = Z_i^T(G_{i+1} \circ \sigma^{'}(Z_iW_i))$$
+\Rightarrow \nabla_{ W_i} \ell(Z_{L+1}, y) = Z_i^T(G_{i+1} \circ \sigma^{'}(Z_iW_i))$$
 
 > Forward and backward passes
 
@@ -47,8 +47,8 @@ $$\frac{\partial l(Z_{L+1}, y)}{\partial W_i} = G_{i+1} \cdot \frac{\partial \si
     2. Iterate: $Z_{i+1} = \sigma_i(Z_iW_i), i =1,...,L$
 
 - **Backward passes**
-    1. Initialize:  $G_{L+1} = \nabla_{Z_{L+1}}l(Z_{L+1},y) = S - I_y, \ S = \text{softmax}(Z_{L+1})$
+    1. Initialize:  $G_{L+1} = \nabla_{Z_{L+1}}\ell(Z_{L+1},y) = S - I_y, \ S = \text{softmax}(Z_{L+1})$
     2. Iterate: $G_i = (G_{i+1} \circ \sigma^{'}(Z_iW_i))W_i^T, i=1,...,L$
-    3. $\nabla_{ W_i} l(Z_{L+1}, y) = Z_i^T(G_{i+1} \circ \sigma^{'}(Z_iW_i))$
+    3. $\nabla_{ W_i} \ell(Z_{L+1}, y) = Z_i^T(G_{i+1} \circ \sigma^{'}(Z_iW_i))$
 
 - “Backpropagation” is just chain rule + intelligent caching of intermediate results 

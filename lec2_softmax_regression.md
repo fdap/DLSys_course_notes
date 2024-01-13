@@ -18,13 +18,13 @@ $$h_\theta(x) = \theta^{T}x, \theta \in \mathbb{R}^{n \times k}$$
     - loss function #2: softmax / cross-entropy loss. The $z_i = p(\text{label} = i) = \frac{exp(h_i(x))}{\sum_{k}^{j=1}exp(h_j(x))} \Leftrightarrow z \equiv \text{softmax}(h(x))$. $$l_{ce}(h(x),y) = -\text{log}p(\text{label}=y) = -h_y(x) + \text{log}\sum^{k}_{j=1}\text{exp}((h_j(x)))$$
 
 - *The softmax regression optimization problem*: 
-$$\mathop{\text{minimize}}\limits_{\theta} \frac{1}{m} \sum_{i=1}^{m}l_{ce}(\theta^Tx^{(i)}, y^{(i)}).$$
+$$\mathop{\text{minimize}}\limits_{\theta} \frac{1}{m} \sum_{i=1}^{m}\ell_{ce}(\theta^Tx^{(i)}, y^{(i)}).$$
 
 - gradient descent 
     - stochastic gradient descent: take many gradient steps each based upon a minibatch (small partition of the data)
-    - $$\frac{\delta}{\delta \theta}l_{ce}(\theta^Tx, y) = \frac{\delta l_{ce}(\theta^Tx, y)}{\delta\theta^Tx} \frac{\delta\theta^Tx}{\delta\theta} = (z-e_y)(x) ,\text{where} \ z = \text{softmax}(\theta^Tx)$$
+    - $$\frac{\delta}{\delta \theta}\ell_{ce}(\theta^Tx, y) = \frac{\delta \ell_{ce}(\theta^Tx, y)}{\delta\theta^Tx} \frac{\delta\theta^Tx}{\delta\theta} = (z-e_y)(x) ,\text{where} \ z = \text{softmax}(\theta^Tx)$$
 
 - *softmax regression algorithm*
     1. iterate over minibatches $X \in \mathbb{R}^{B\times n}, y \in \{1,...,k\}^{B}$ of training set
-    2. "matrix batch" form of the loss, $$\Delta_\theta l_{ce}(X\theta, y) \in \mathbb{R}^{n \times k} = X^T(Z-I_y), \ Z=\text{softmax}(X\theta)$$
+    2. "matrix batch" form of the loss, $$\Delta_\theta \ell_{ce}(X\theta, y) \in \mathbb{R}^{n \times k} = X^T(Z-I_y), \ Z=\text{softmax}(X\theta)$$
 
