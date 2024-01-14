@@ -6,7 +6,7 @@ Notes for Deep Learning Systems from CMU
 - [x] Lec2. ML Refresher / Softmax Regression
 - [x] Lec3. Manual Neural Networks / Backprop
 - [x] *hw0*
-- [ ] Lec4. Automatic Differentiation
+- [x] Lec4. Automatic Differentiation
 - [ ] Lec5. Automatic Differentiation Implementation
 - [ ] Lec6. Optimization
 - [ ] Lec7. Neural Network Library Abstractions
