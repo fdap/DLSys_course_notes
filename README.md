@@ -7,7 +7,7 @@ Notes for Deep Learning Systems from CMU
 - [x] Lec3. Manual Neural Networks / Backprop
 - [x] *hw0*
 - [x] Lec4. Automatic Differentiation
-- [ ] Lec5. Automatic Differentiation Implementation
+- [x] Lec5. Automatic Differentiation Implementation
 - [ ] Lec6. Optimization
 - [ ] Lec7. Neural Network Library Abstractions
 - [ ] Lec8. NN Library Implementation
