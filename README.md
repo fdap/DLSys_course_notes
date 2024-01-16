@@ -8,7 +8,7 @@ Notes for Deep Learning Systems from CMU
 - [x] *hw0*
 - [x] Lec4. Automatic Differentiation
 - [x] Lec5. Automatic Differentiation Implementation
-- [ ] Lec6. Optimization
+- [x] Lec6. Optimization
 - [ ] Lec7. Neural Network Library Abstractions
 - [ ] Lec8. NN Library Implementation
 - [ ] Lec9. Normalization, Dropout, + Implementation
