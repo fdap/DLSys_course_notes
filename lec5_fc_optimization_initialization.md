@@ -21,7 +21,7 @@ with parameter $\theta = \{W_{1:L}, b_{1:L}\}$, and where $\sigma_i(x)$ is the n
 5. Adam
 
 ## Weight Initialization
-1. 
+1. zero initialization is a (bad) local optimum of the objective (really saddle point)
 2. 
 
 
