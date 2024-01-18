@@ -21,3 +21,33 @@
 - Reverse mode AD by extending computational graph:
     1. construct separate graph nodes for adjoints.
     2. Used by modern deep learning frameworks.
+
+
+
+## Homework 2
+
+### backward computation
+
+The general goal of reverse mode autodifferentiation is to compute the gradient of some downstream function $\ell$ of $f(x,y)$ with respect to $x$ (or $y$).  Written formally, we could write this as trying to compute
+$$\frac{\partial \ell}{\partial x} = \frac{\partial \ell}{\partial f(x,y)} \frac{\partial f(x,y)}{\partial x}.$$
+The "incoming backward gradient" is precisely the term $\frac{\partial \ell}{\partial f(x,y)}$, so we want our `gradient()` function to ultimately compute the _product_ between this backward gradient the function's own derivative $\frac{\partial f(x,y)}{\partial x}$.
+
+- `Transpose`: reverses the order of two axes (axis1, axis2), defaults to the last two axes (1 input, `axes` - tuple)
+
+The derivative of a transposed vector *w.r.t* itself is the identity matrix, but the transpose gets applied to everything after.
+
+$$\frac{\partial \ell}{\partial x} = \frac{\partial \ell}{\partial f(x)} \frac{\partial f(x)}{\partial x} = \text{gradient} \frac{\partial x^T}{\partial x} = \text{gradient}$$
+
+
+- `Reshape`: reshape an array $x$ to a new shape
+$$\frac{\partial \ell}{\partial x} = \frac{\partial \ell}{\partial f(x,y)} \frac{\partial f(x,y)}{\partial x} = \text{gradient} \frac{\partial f(x,y)}{\partial x}$$
+
+- `BroadcastTo`:
+broadcast an array $x$ to a new shape (1 input, `shape` - tuple), $$x\in\mathbb{R}^{...} \to x\in\mathbb{R}^{new \ shape}$$
+
+
+- `MatMul`: matrix multiplication of the inputs (2 inputs)
+
+
+- `Summation`: sum of array elements over given axes (1 input, `axes` - tuple)
+
