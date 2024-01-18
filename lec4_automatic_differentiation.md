@@ -38,6 +38,8 @@ The derivative of a transposed vector *w.r.t* itself is the identity matrix, but
 
 $$\frac{\partial \ell}{\partial x} = \frac{\partial \ell}{\partial f(x)} \frac{\partial f(x)}{\partial x} = \text{gradient} \frac{\partial x^T}{\partial x} = \text{gradient}$$
 
+https://souryadey.github.io/teaching/material/Matrix_Calculus.pdf
+
 
 - `Reshape`: reshape an array $x$ to a new shape
 $$\frac{\partial \ell}{\partial x} = \frac{\partial \ell}{\partial f(x,y)} \frac{\partial f(x,y)}{\partial x} = \text{gradient} \frac{\partial f(x,y)}{\partial x}$$
