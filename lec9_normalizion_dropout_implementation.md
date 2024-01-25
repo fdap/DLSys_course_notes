@@ -18,7 +18,7 @@ Also common to add an additional scalar weight and bias to each term (only chang
 
 2. weight decay ($l_2$ regularization): keeping parameters small by adding a loss: $$\mathop{\text{minimize}}\limits_{W_{1:L}} \frac{1}{m} \sum_{i=1}^{m}\ell_{ce}(h_{W_{1:L}}(x^{(i)}), y^{(i)}) + \frac{\lambda}{2}\sum_{i=1}^{L}\parallel W_i \parallel _2^2$$. Results in the gradient descent updates: $$W_i = W_i - \alpha \nabla_{W_i} \ell(h(X), y) - \alpha \lambda W_i = (1-\alpha \lambda)W_i - \alpha \nabla_{W_i} \ell(h(X), y)$$, i.e., at each iteration we **shrink the weights** by a factor $(1-\alpha \lambda)$ before taking the gradient step.
 
-3. 
+3. Dropout: functions as stochastic approximation, and it is frequently cast as making networks “robust” to missing activations.
 
 
 
