@@ -20,6 +20,8 @@ Also common to add an additional scalar weight and bias to each term (only chang
 
 3. Dropout: functions as stochastic approximation, and it is frequently cast as making networks “robust” to missing activations.
 
+## Interaction of optimization, initialization, normalization, regularization
+
 
 
 
