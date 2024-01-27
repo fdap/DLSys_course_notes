@@ -21,14 +21,15 @@ Also common to add an additional scalar weight and bias to each term (only chang
 3. Dropout: functions as stochastic approximation, and it is frequently cast as making networks “robust” to missing activations.
 
 ## Interaction of optimization, initialization, normalization, regularization
+- Many design choices meant to ease optimization ability of deep networks:
+1. Choice of optimizer learning rate / momentum
+2. Choice of weight initialization
+3. Normalization layer
+4. Reguarlization
+These factors interact with each other.
 
-
-
-
-
-
-## Interaction of optimization, initialization, normalization, regularization
-
+-  In many cases, it seems to be possible to get similarly
+good results with wildly different architectural and methodological choices
 
 
 
