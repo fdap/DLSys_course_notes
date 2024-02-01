@@ -19,4 +19,5 @@ the image to produce a new image, written $y = z * w$.
 4. Dilate (spread out) convolution filter, so that it covers more of the image;
 
 
+
 ## Differentiating convolutions
