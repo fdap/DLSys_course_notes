@@ -9,11 +9,11 @@ Notes for Deep Learning Systems from CMU
 - [x] Lec4. Automatic Differentiation
 - [x] Lec5. Automatic Differentiation Implementation
 - [x] Lec6. Optimization
-- [ ] Lec7. Neural Network Library Abstractions
-- [ ] Lec8. NN Library Implementation
-- [ ] Lec9. Normalization, Dropout, + Implementation
-- [ ] Lec10. Convolutional Networks
-- [ ] Lec11. Hardware Acceleration for Linear Algebra
+- [x] Lec7. Neural Network Library Abstractions
+- [x] Lec8. NN Library Implementation
+- [x] Lec9. Normalization, Dropout, + Implementation
+- [x] Lec10. Convolutional Networks
+- [x] Lec11. Hardware Acceleration for Linear Algebra
 - [ ] Lec12. Hardware Acceleration + GPUs
 - [ ] Lec13. Hardware Acceleration Implementation
 - [ ] Lec14. Convolutions Network Implementation 	 	 
