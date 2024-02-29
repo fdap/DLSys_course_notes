@@ -42,14 +42,15 @@ https://souryadey.github.io/teaching/material/Matrix_Calculus.pdf
 
 
 - `Reshape`: reshape an array $x$ to a new shape
-$$\frac{\partial \ell}{\partial x} = \frac{\partial \ell}{\partial f(x,y)} \frac{\partial f(x,y)}{\partial x} = \text{gradient} \frac{\partial f(x,y)}{\partial x}$$
+
 
 - `BroadcastTo`:
 broadcast an array $x$ to a new shape (1 input, `shape` - tuple), $$x\in\mathbb{R}^{...} \to x\in\mathbb{R}^{new \ shape}$$
 
 
 - `MatMul`: matrix multiplication of the inputs (2 inputs)
-
+$$\frac{\partial f(X,Y)}{\partial X} = \frac{\partial XY}{ \partial X} = Y^T$$
+$$\frac{\partial f(X,Y)}{\partial Y} = \frac{\partial XY}{ \partial Y} = X$$
 
 - `Summation`: sum of array elements over given axes (1 input, `axes` - tuple)
 
