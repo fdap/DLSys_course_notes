@@ -11,6 +11,7 @@ Notes for Deep Learning Systems from CMU
 - [x] Lec6. Optimization
 - [x] Lec7. Neural Network Library Abstractions
 - [x] Lec8. NN Library Implementation
+- [x] *hw1*
 - [x] Lec9. Normalization, Dropout, + Implementation
 - [x] Lec10. Convolutional Networks
 - [x] Lec11. Hardware Acceleration for Linear Algebra
