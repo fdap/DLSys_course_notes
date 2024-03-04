@@ -15,7 +15,7 @@ Notes for Deep Learning Systems from CMU
 - [x] Lec9. Normalization, Dropout, + Implementation
 - [x] Lec10. Convolutional Networks
 - [x] Lec11. Hardware Acceleration for Linear Algebra
-- [ ] Lec12. Hardware Acceleration + GPUs
+- [x] Lec12. Hardware Acceleration + GPUs
 - [ ] Lec13. Hardware Acceleration Implementation
 - [ ] Lec14. Convolutions Network Implementation 	 	 
 - [ ] Lec15. Sequence Modeling + RNNs
