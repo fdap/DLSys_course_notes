@@ -19,7 +19,7 @@ Notes for Deep Learning Systems from CMU
 - [ ] Lec13. Hardware Acceleration Implementation
 - [ ] Lec14. Convolutions Network Implementation 	 	 
 - [x] Lec15. Sequence Modeling + RNNs
-- [ ] Lec16. Sequence Modeling Implementation
+- [x] Lec16. Sequence Modeling Implementation
 - [ ] Lec17. Transformers and Autoregressive Models
 - [ ] Lec18. Transformers Implementation 	 	 
 - [ ] Lec19. Training Large Models	Chen
