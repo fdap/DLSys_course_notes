@@ -22,8 +22,8 @@ Notes for Deep Learning Systems from CMU
 - [x] Lec16. Sequence Modeling Implementation
 - [ ] Lec17. Transformers and Autoregressive Models
 - [ ] Lec18. Transformers Implementation 	 	 
-- [ ] Lec19. Training Large Models	Chen
-- [ ] Lec20. Generative Models
+- [x] Lec19. Training Large Models
+- [ ] Lec20. Generative Modelså
 - [ ] Lec21. Generative Models Implementation
 - [ ] Lec22. Customize Pretrained Models	 	 
 - [ ] Lec23. Model Deployment
